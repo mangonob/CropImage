@@ -12,6 +12,10 @@
 		4AAF61831E27CECC00482255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61811E27CECC00482255 /* Main.storyboard */; };
 		4AAF61851E27CECC00482255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61841E27CECC00482255 /* Assets.xcassets */; };
 		4AAF61881E27CECC00482255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61861E27CECC00482255 /* LaunchScreen.storyboard */; };
+		4AAF61911E27CF7100482255 /* CDCropImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF61901E27CF7100482255 /* CDCropImageController.swift */; };
+		4AAF61951E27D01400482255 /* CDCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF61941E27D01400482255 /* CDCropView.swift */; };
+		4AAF61971E27D02700482255 /* CDCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61961E27D02700482255 /* CDCropView.xib */; };
+		4AC277561E27DF0100C59E00 /* CDCropPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC277551E27DF0100C59E00 /* CDCropPathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		4AAF61841E27CECC00482255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAF61871E27CECC00482255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AAF61891E27CECC00482255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AAF61901E27CF7100482255 /* CDCropImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropImageController.swift; sourceTree = "<group>"; };
+		4AAF61941E27D01400482255 /* CDCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropView.swift; sourceTree = "<group>"; };
+		4AAF61961E27D02700482255 /* CDCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCropView.xib; sourceTree = "<group>"; };
+		4AC277551E27DF0100C59E00 /* CDCropPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropPathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +64,24 @@
 			children = (
 				4AAF617D1E27CECC00482255 /* AppDelegate.swift */,
 				4AAF617F1E27CECC00482255 /* ViewController.swift */,
+				4AAF618F1E27CF5700482255 /* CropImageController */,
 				4AAF61811E27CECC00482255 /* Main.storyboard */,
 				4AAF61841E27CECC00482255 /* Assets.xcassets */,
 				4AAF61861E27CECC00482255 /* LaunchScreen.storyboard */,
 				4AAF61891E27CECC00482255 /* Info.plist */,
 			);
 			path = CropImage;
+			sourceTree = "<group>";
+		};
+		4AAF618F1E27CF5700482255 /* CropImageController */ = {
+			isa = PBXGroup;
+			children = (
+				4AAF61901E27CF7100482255 /* CDCropImageController.swift */,
+				4AAF61941E27D01400482255 /* CDCropView.swift */,
+				4AAF61961E27D02700482255 /* CDCropView.xib */,
+				4AC277551E27DF0100C59E00 /* CDCropPathView.swift */,
+			);
+			path = CropImageController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AAF61881E27CECC00482255 /* LaunchScreen.storyboard in Resources */,
+				4AAF61971E27D02700482255 /* CDCropView.xib in Resources */,
 				4AAF61851E27CECC00482255 /* Assets.xcassets in Resources */,
 				4AAF61831E27CECC00482255 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AAF61801E27CECC00482255 /* ViewController.swift in Sources */,
+				4AAF61951E27D01400482255 /* CDCropView.swift in Sources */,
+				4AC277561E27DF0100C59E00 /* CDCropPathView.swift in Sources */,
 				4AAF617E1E27CECC00482255 /* AppDelegate.swift in Sources */,
+				4AAF61911E27CF7100482255 /* CDCropImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -302,6 +326,7 @@
 				4AAF618E1E27CECC00482255 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
