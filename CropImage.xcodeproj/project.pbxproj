@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A972D5B1E2886F4006B4BF5 /* CDCropScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */; };
+		4A9AEE791E292FF500FD81A5 /* CDCropBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9AEE781E292FF500FD81A5 /* CDCropBorderView.swift */; };
 		4AAF617E1E27CECC00482255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF617D1E27CECC00482255 /* AppDelegate.swift */; };
 		4AAF61801E27CECC00482255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF617F1E27CECC00482255 /* ViewController.swift */; };
 		4AAF61831E27CECC00482255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61811E27CECC00482255 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		15B922CF4CD8787FD4489F96 /* Pods-CropImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CropImage/Pods-CropImage.debug.xcconfig"; sourceTree = "<group>"; };
 		323F5FFDCC443193F9FA94F7 /* Pods-CropImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-CropImage/Pods-CropImage.release.xcconfig"; sourceTree = "<group>"; };
 		4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropScrollView.swift; sourceTree = "<group>"; };
+		4A9AEE781E292FF500FD81A5 /* CDCropBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropBorderView.swift; sourceTree = "<group>"; };
 		4AAF617A1E27CECC00482255 /* CropImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF617D1E27CECC00482255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF617F1E27CECC00482255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				4ACD19091E2876F8003F33E6 /* CDCropController.swift */,
 				4AAF61941E27D01400482255 /* CDCropView.swift */,
 				4AAF61961E27D02700482255 /* CDCropView.xib */,
+				4A9AEE781E292FF500FD81A5 /* CDCropBorderView.swift */,
 				4AC277551E27DF0100C59E00 /* CDCropPathView.swift */,
 				4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */,
 			);
@@ -151,7 +154,7 @@
 				TargetAttributes = {
 					4AAF61791E27CECC00482255 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 4GM649GA4F;
+						DevelopmentTeam = RXLA5TBA2W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -246,6 +249,7 @@
 				4AC277561E27DF0100C59E00 /* CDCropPathView.swift in Sources */,
 				4A972D5B1E2886F4006B4BF5 /* CDCropScrollView.swift in Sources */,
 				4AAF617E1E27CECC00482255 /* AppDelegate.swift in Sources */,
+				4A9AEE791E292FF500FD81A5 /* CDCropBorderView.swift in Sources */,
 				4ACD190A1E2876F8003F33E6 /* CDCropController.swift in Sources */,
 				4AAF61911E27CF7100482255 /* CDCropImageController.swift in Sources */,
 			);
@@ -373,7 +377,7 @@
 			baseConfigurationReference = 15B922CF4CD8787FD4489F96 /* Pods-CropImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4GM649GA4F;
+				DEVELOPMENT_TEAM = RXLA5TBA2W;
 				INFOPLIST_FILE = CropImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Darwin.CropImage;
@@ -387,7 +391,7 @@
 			baseConfigurationReference = 323F5FFDCC443193F9FA94F7 /* Pods-CropImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4GM649GA4F;
+				DEVELOPMENT_TEAM = RXLA5TBA2W;
 				INFOPLIST_FILE = CropImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Darwin.CropImage;

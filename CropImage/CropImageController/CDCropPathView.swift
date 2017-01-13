@@ -8,10 +8,21 @@
 
 import UIKit
 
+@objc protocol CDCropPathViewDelegate {
+    @objc optional func cd_cropPathViewDidLayoutSubviews(_ cropPathView: CDCropPathView)
+}
+
 internal class CDCropPathView: UIView {
+    weak var delegate: CDCropPathViewDelegate?
+    
     var path: UIBezierPath? { didSet { setNeedsDisplay() } }
     var foregroundColor: UIColor? { didSet { setNeedsDisplay() } }
     var borderColor: UIColor? { didSet { setNeedsDisplay() } }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        delegate?.cd_cropPathViewDidLayoutSubviews?(self)
+    }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)

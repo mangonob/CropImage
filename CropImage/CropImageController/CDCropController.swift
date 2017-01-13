@@ -21,7 +21,6 @@ class CDCropController: UIViewController {
         super.viewDidLoad()
         
         automaticallyAdjustsScrollViewInsets = false
-        edgesForExtendedLayout = []
         
         _cropView.translatesAutoresizingMaskIntoConstraints = true
         _cropView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

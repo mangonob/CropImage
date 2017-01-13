@@ -15,7 +15,7 @@ class CDCropView: UIView {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pathView: CDCropPathView!
     
-    @IBOutlet var borderViews: [UIView]!
+    @IBOutlet var borderViews: [CDCropBorderView]!
     
     //MARK: - Initialize
     static func instance() -> CDCropView {
@@ -65,11 +65,10 @@ class CDCropView: UIView {
         
         foregroundColor = UIColor.black.withAlphaComponent(0.5)
         pathView.backgroundColor = UIColor.clear
-    }
-    
-    override var frame: CGRect {
-        didSet {
-            updateScrollView()
+        
+        pathView.delegate = self
+        borderViews.forEach { (view) in
+            view.delegate = self
         }
     }
 
@@ -142,6 +141,17 @@ extension CDCropView {
     }
 }
 
+extension CDCropView: CDCropPathViewDelegate {
+    func cd_cropPathViewDidLayoutSubviews(_ cropPathView: CDCropPathView) {
+        updateScrollView()
+    }
+}
+
+extension CDCropView: CDCropBorderViewDelegate {
+    func cd_cropBorderViewDidLayoutSubviews(_ cropPathView: CDCropBorderView) {
+        updateScrollView()
+    }
+}
 
 
 
