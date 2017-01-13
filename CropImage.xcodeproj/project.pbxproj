@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A972D5B1E2886F4006B4BF5 /* CDCropScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */; };
 		4AAF617E1E27CECC00482255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF617D1E27CECC00482255 /* AppDelegate.swift */; };
 		4AAF61801E27CECC00482255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF617F1E27CECC00482255 /* ViewController.swift */; };
 		4AAF61831E27CECC00482255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61811E27CECC00482255 /* Main.storyboard */; };
@@ -16,9 +17,15 @@
 		4AAF61951E27D01400482255 /* CDCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF61941E27D01400482255 /* CDCropView.swift */; };
 		4AAF61971E27D02700482255 /* CDCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61961E27D02700482255 /* CDCropView.xib */; };
 		4AC277561E27DF0100C59E00 /* CDCropPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC277551E27DF0100C59E00 /* CDCropPathView.swift */; };
+		4ACD190A1E2876F8003F33E6 /* CDCropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACD19091E2876F8003F33E6 /* CDCropController.swift */; };
+		55DE38ACA9EA63C182349605 /* Pods_CropImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008070CA30037D7F313F03B0 /* Pods_CropImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		008070CA30037D7F313F03B0 /* Pods_CropImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CropImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B922CF4CD8787FD4489F96 /* Pods-CropImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CropImage/Pods-CropImage.debug.xcconfig"; sourceTree = "<group>"; };
+		323F5FFDCC443193F9FA94F7 /* Pods-CropImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-CropImage/Pods-CropImage.release.xcconfig"; sourceTree = "<group>"; };
+		4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropScrollView.swift; sourceTree = "<group>"; };
 		4AAF617A1E27CECC00482255 /* CropImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAF617D1E27CECC00482255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAF617F1E27CECC00482255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +37,8 @@
 		4AAF61941E27D01400482255 /* CDCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropView.swift; sourceTree = "<group>"; };
 		4AAF61961E27D02700482255 /* CDCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCropView.xib; sourceTree = "<group>"; };
 		4AC277551E27DF0100C59E00 /* CDCropPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropPathView.swift; sourceTree = "<group>"; };
+		4ACD19041E2861E1003F33E6 /* BridgeHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeaderFile.h; sourceTree = "<group>"; };
+		4ACD19091E2876F8003F33E6 /* CDCropController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DE38ACA9EA63C182349605 /* Pods_CropImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		277AD786789C9B9B46706385 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				008070CA30037D7F313F03B0 /* Pods_CropImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4AAF61711E27CECC00482255 = {
 			isa = PBXGroup;
 			children = (
 				4AAF617C1E27CECC00482255 /* CropImage */,
 				4AAF617B1E27CECC00482255 /* Products */,
+				DD3B6B28B2371FBF0D6A05E2 /* Pods */,
+				277AD786789C9B9B46706385 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +88,7 @@
 				4AAF61811E27CECC00482255 /* Main.storyboard */,
 				4AAF61841E27CECC00482255 /* Assets.xcassets */,
 				4AAF61861E27CECC00482255 /* LaunchScreen.storyboard */,
+				4ACD19041E2861E1003F33E6 /* BridgeHeaderFile.h */,
 				4AAF61891E27CECC00482255 /* Info.plist */,
 			);
 			path = CropImage;
@@ -77,11 +98,22 @@
 			isa = PBXGroup;
 			children = (
 				4AAF61901E27CF7100482255 /* CDCropImageController.swift */,
+				4ACD19091E2876F8003F33E6 /* CDCropController.swift */,
 				4AAF61941E27D01400482255 /* CDCropView.swift */,
 				4AAF61961E27D02700482255 /* CDCropView.xib */,
 				4AC277551E27DF0100C59E00 /* CDCropPathView.swift */,
+				4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */,
 			);
 			path = CropImageController;
+			sourceTree = "<group>";
+		};
+		DD3B6B28B2371FBF0D6A05E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15B922CF4CD8787FD4489F96 /* Pods-CropImage.debug.xcconfig */,
+				323F5FFDCC443193F9FA94F7 /* Pods-CropImage.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AAF618C1E27CECC00482255 /* Build configuration list for PBXNativeTarget "CropImage" */;
 			buildPhases = (
+				DF994AF41EFDB7172DCC7E00 /* [CP] Check Pods Manifest.lock */,
 				4AAF61761E27CECC00482255 /* Sources */,
 				4AAF61771E27CECC00482255 /* Frameworks */,
 				4AAF61781E27CECC00482255 /* Resources */,
+				10FC22CAD5BAFFC61E56997F /* [CP] Embed Pods Frameworks */,
+				69FB072028B093BEF9882F5F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -116,7 +151,7 @@
 				TargetAttributes = {
 					4AAF61791E27CECC00482255 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = RXLA5TBA2W;
+						DevelopmentTeam = 4GM649GA4F;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -153,6 +188,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10FC22CAD5BAFFC61E56997F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CropImage/Pods-CropImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69FB072028B093BEF9882F5F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CropImage/Pods-CropImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF994AF41EFDB7172DCC7E00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4AAF61761E27CECC00482255 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -161,7 +244,9 @@
 				4AAF61801E27CECC00482255 /* ViewController.swift in Sources */,
 				4AAF61951E27D01400482255 /* CDCropView.swift in Sources */,
 				4AC277561E27DF0100C59E00 /* CDCropPathView.swift in Sources */,
+				4A972D5B1E2886F4006B4BF5 /* CDCropScrollView.swift in Sources */,
 				4AAF617E1E27CECC00482255 /* AppDelegate.swift in Sources */,
+				4ACD190A1E2876F8003F33E6 /* CDCropController.swift in Sources */,
 				4AAF61911E27CF7100482255 /* CDCropImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +318,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/CropImage/BridgeHeaderFile.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -275,6 +361,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/CropImage/BridgeHeaderFile.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -283,9 +370,10 @@
 		};
 		4AAF618D1E27CECC00482255 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15B922CF4CD8787FD4489F96 /* Pods-CropImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RXLA5TBA2W;
+				DEVELOPMENT_TEAM = 4GM649GA4F;
 				INFOPLIST_FILE = CropImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Darwin.CropImage;
@@ -296,9 +384,10 @@
 		};
 		4AAF618E1E27CECC00482255 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323F5FFDCC443193F9FA94F7 /* Pods-CropImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RXLA5TBA2W;
+				DEVELOPMENT_TEAM = 4GM649GA4F;
 				INFOPLIST_FILE = CropImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Darwin.CropImage;
