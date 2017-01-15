@@ -28,13 +28,22 @@ internal class CDCropPathView: UIView {
         super.draw(rect)
         
         foregroundColor?.setFill()
-        (borderColor ?? UIColor.blue).setStroke()
+        (borderColor ?? UIColor.lightGray).setStroke()
         
         let boundsPath = UIBezierPath(rect: bounds)
         boundsPath.fill()
         
-        path?.lineWidth = 8
-        path?.stroke()
-        path?.fill(with: .clear, alpha: 1)
+        guard let path = path else { return }
+        
+        let centerOfPath = CGPoint(x: path.bounds.origin.x + path.bounds.width / 2, y: path.bounds.origin.y + path.bounds.height / 2)
+        let centerOfSelf = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
+        let delta = CGPoint(x: centerOfSelf.x - centerOfPath.x, y: centerOfSelf.y - centerOfPath.y)
+        
+        path.apply(CGAffineTransform.identity.translatedBy(x: delta.x, y: delta.y))
+        
+        path.lineWidth = 2
+        path.stroke()
+        
+        path.fill(with: .clear, alpha: 1)
     }
 }

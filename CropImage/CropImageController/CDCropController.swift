@@ -22,6 +22,8 @@ class CDCropController: UIViewController {
         
         automaticallyAdjustsScrollViewInsets = false
         
+        edgesForExtendedLayout = []
+        
         _cropView.translatesAutoresizingMaskIntoConstraints = true
         _cropView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         _cropView.frame = view.bounds
@@ -29,6 +31,6 @@ class CDCropController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
-        cropView.path = UIBezierPath(ovalIn: CGRect(x: 100, y: 100, width: 200, height: 200))
+        cropView.path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 300, height: 300))
     }
 }

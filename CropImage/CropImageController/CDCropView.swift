@@ -70,6 +70,14 @@ class CDCropView: UIView {
         borderViews.forEach { (view) in
             view.delegate = self
         }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name.UIDeviceOrientationDidChange, object: nil, queue: nil) { (notification)  in
+            print(self.pathView.frame)
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     //MARK: - Update
@@ -77,15 +85,22 @@ class CDCropView: UIView {
         if scrollView == nil { return }
         
         if let path = path, pathView != nil {
-            scrollView?.frame = convert(path.bounds, from: pathView)
+            let s1 = path.bounds.size
+            let s2 = pathView.bounds.size
+            let origin = CGPoint(x: (s2.width - s1.width) / 2, y: (s2.height - s1.height) / 2)
+            let b = CGRect(origin: origin, size: s1)
+            
+            scrollView?.frame = convert(b , from: pathView)
         }
         
         if let image = image {
-            scrollView?.contentSize = image.size
+            let w = image.size.width
+            let h = image.size.height
+            let s = scrollView.zoomScale
+            scrollView?.contentSize = CGSize(width: w * s, height: h * s)
         }
         
-        if let path = path, let image = image {
-        }
+        scrollView.setZoomScale(suggestZoomScale, animated: false)
     }
     
     //MARK: - UIView
@@ -96,6 +111,25 @@ class CDCropView: UIView {
         }
         
         updateScrollView()
+    }
+    
+    // MARK: - Action
+    private var suggestZoomScale: CGFloat {
+        guard let ms = image?.size, let path = path else { return 1 }
+        let bs = bounds.size
+        let ps = path.bounds.size
+        
+        let min1 = min(bs.width / ms.width, bs.height / ms.height) + 0.0005
+        let min2 = max(ps.width / ms.width, ps.height / ms.height) + 0.0005
+        
+        scrollView.minimumZoomScale = min2
+        scrollView.maximumZoomScale = max(1, 2 * max(min1, min2))
+        
+        return min(min1, min2)
+    }
+    
+    @IBAction func doubleTapAction(_ sender: Any) {
+        scrollView.setZoomScale(suggestZoomScale, animated: true)
     }
 }
 

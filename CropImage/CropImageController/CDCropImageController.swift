@@ -32,6 +32,7 @@ class CDCropImageController: UIViewController {
     var innerNavigationController: UINavigationController {
         if _innerNavigationController == nil {
             _innerNavigationController = UINavigationController(rootViewController: cropController)
+            _innerNavigationController.setNavigationBarHidden(true, animated: false)
         }
         return _innerNavigationController
     }
