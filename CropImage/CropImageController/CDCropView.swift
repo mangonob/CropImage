@@ -12,7 +12,7 @@ class CDCropView: UIView {
     @IBOutlet weak var centerX: NSLayoutConstraint!
     @IBOutlet weak var centerY: NSLayoutConstraint!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: CDCropScrollView!
     @IBOutlet weak var pathView: CDCropPathView!
     
     @IBOutlet var borderViews: [CDCropBorderView]!
@@ -101,6 +101,7 @@ class CDCropView: UIView {
         }
         
         scrollView.setZoomScale(suggestZoomScale, animated: false)
+        scrollView.setContentOffset(suggestContentOffset, animated: false)
     }
     
     //MARK: - UIView
@@ -113,7 +114,6 @@ class CDCropView: UIView {
         updateScrollView()
     }
     
-    // MARK: - Action
     private var suggestZoomScale: CGFloat {
         guard let ms = image?.size, let path = path else { return 1 }
         let bs = bounds.size
@@ -123,13 +123,36 @@ class CDCropView: UIView {
         let min2 = max(ps.width / ms.width, ps.height / ms.height) + 0.0005
         
         scrollView.minimumZoomScale = min2
+        
         scrollView.maximumZoomScale = max(1, 2 * max(min1, min2))
         
-        return min(min1, min2)
+        return max(min1, min2)
     }
     
+    private var suggestContentOffset: CGPoint {
+        var b = CGRect(origin: CGPoint.zero, size: CGSize.zero)
+        b.size = scrollView.bounds.size
+        let midPointOfScroll = CGPoint(x: b.midX, y: b.midY)
+        
+        b.size = imageView.frame.size
+        let midPointImage = CGPoint(x: b.midX, y: b.midY)
+        
+        var offset = CGPoint(x: midPointImage.x - midPointOfScroll.x, y: midPointImage.y - midPointOfScroll.y)
+        offset.x += centerOffset.x
+        offset.y += centerOffset.y
+        
+        return offset
+    }
+    
+    // MARK: - Action
     @IBAction func doubleTapAction(_ sender: Any) {
-        scrollView.setZoomScale(suggestZoomScale, animated: true)
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            for _ in 1...2 {
+                guard let scale = self?.suggestZoomScale, let offset = self?.suggestContentOffset else { return }
+                self?.scrollView.contentOffset = offset
+                self?.scrollView.zoomScale = scale
+            }
+        }
     }
 }
 

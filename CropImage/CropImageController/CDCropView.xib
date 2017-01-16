@@ -197,7 +197,7 @@
             </connections>
             <point key="canvasLocation" x="-293.5" y="-287"/>
         </view>
-        <tapGestureRecognizer id="qsA-os-RR1">
+        <tapGestureRecognizer numberOfTapsRequired="2" id="qsA-os-RR1">
             <connections>
                 <action selector="doubleTapAction:" destination="iN0-l3-epB" id="c6D-XJ-cCJ"/>
             </connections>
