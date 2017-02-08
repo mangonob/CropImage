@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CDCropView" customModule="CropImage" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="383" height="916"/>
+            <rect key="frame" x="0.0" y="0.0" width="370" height="576"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSd-gf-ec0" customClass="CDCropScrollView" customModule="CropImage" customModuleProvider="target">
@@ -34,13 +34,13 @@
                     </connections>
                 </scrollView>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQC-y9-X2G" userLabel="Cover Container">
-                    <rect key="frame" x="0.0" y="0.0" width="383" height="916"/>
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="576"/>
                     <subviews>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7WM-1h-zKe" userLabel="Path Container">
-                            <rect key="frame" x="0.0" y="266.5" width="383" height="383"/>
+                            <rect key="frame" x="0.0" y="103" width="370" height="370"/>
                             <subviews>
                                 <view clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="E5L-nc-SGC" userLabel="Center Path View" customClass="CDCropPathView" customModule="CropImage" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="383"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="370"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                             </subviews>
@@ -55,47 +55,47 @@
                             </constraints>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPV-qu-RNp" userLabel="Top" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="383" height="266.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="370" height="103"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4988721391" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" id="iLd-Ve-AEh"/>
                             </constraints>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGD-CX-Ylx" userLabel="Left" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="266.5" width="0.0" height="383"/>
+                            <rect key="frame" x="0.0" y="103" width="0.0" height="370"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4988721391" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" id="M7E-zR-IfS"/>
                             </constraints>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3P-bX-IEf" userLabel="Right" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="383" y="266.5" width="0.0" height="383"/>
+                            <rect key="frame" x="370" y="103" width="0.0" height="370"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4988721391" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" id="9jE-xn-SV9"/>
                             </constraints>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rx0-hW-nfE" userLabel="Bottom" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="649.5" width="383" height="266.5"/>
+                            <rect key="frame" x="0.0" y="473" width="370" height="103"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49887213908450706" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ohR-Nq-kWh"/>
                             </constraints>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEo-Rw-mgF" userLabel="Left Bottom" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="649.5" width="0.0" height="266.5"/>
+                            <rect key="frame" x="0.0" y="473" width="0.0" height="103"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49776549258474578" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtX-hE-jgD" userLabel="Right Bottom" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="383" y="649.5" width="0.0" height="266.5"/>
+                            <rect key="frame" x="370" y="473" width="0.0" height="103"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49776549260000003" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoO-oo-bc2" userLabel="Right Top" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="383" y="0.0" width="0.0" height="266.5"/>
+                            <rect key="frame" x="370" y="0.0" width="0.0" height="103"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49776549260000003" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWV-bG-qVP" userLabel="Left Top" customClass="CDCropBorderView" customModule="CropImage" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="266.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="103"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49776549260000003" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
@@ -142,7 +142,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYI-59-93c">
-                    <rect key="frame" x="0.0" y="843.5" width="383" height="72.5"/>
+                    <rect key="frame" x="0.0" y="503.5" width="370" height="72.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCO-9e-IF9">
                             <rect key="frame" x="13" y="20" width="53" height="33"/>
@@ -152,7 +152,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yt0-fG-QcV">
-                            <rect key="frame" x="311" y="19" width="59" height="33"/>
+                            <rect key="frame" x="298" y="19" width="59" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="Choose">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,7 +195,7 @@
                 <outletCollection property="borderViews" destination="qoO-oo-bc2" collectionClass="NSMutableArray" id="oud-Rn-Ui7"/>
                 <outletCollection property="borderViews" destination="hWV-bG-qVP" collectionClass="NSMutableArray" id="Bcj-XJ-ETa"/>
             </connections>
-            <point key="canvasLocation" x="-293.5" y="-287"/>
+            <point key="canvasLocation" x="-522" y="-499"/>
         </view>
         <tapGestureRecognizer numberOfTapsRequired="2" id="qsA-os-RR1">
             <connections>

@@ -51,7 +51,7 @@ class CDCropView: UIView {
         }
     }
     
-    var currentCroppedImage: UIImage? {
+    var resultImage: UIImage? {
         return nil
     }
     

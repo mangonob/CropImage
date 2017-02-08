@@ -101,8 +101,8 @@ extension CDCropImageController {
         }
     }
     
-    var currentCroppedImage: UIImage? {
-        return cropController.cropView.currentCroppedImage
+    var resultImage: UIImage? {
+        return cropController.cropView.resultImage
     }
     
     var borderColor: UIColor? {
