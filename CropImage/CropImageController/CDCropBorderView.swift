@@ -15,6 +15,9 @@ import UIKit
 class CDCropBorderView: UIView {
     weak var delegate: CDCropBorderViewDelegate?
     
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         delegate?.cd_cropBorderViewDidLayoutSubviews?(self)

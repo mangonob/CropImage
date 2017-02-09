@@ -15,50 +15,58 @@ import UIKit
 
 class CDCropImageController: UIViewController {
     weak var delegate: CDCropImageControllerDelegate?
-    var autoDismiss = true
     
-    //MARK: - Content ViewControllers
-    private var _cropController: CDCropController!
-    var cropController: CDCropController {
-        if _cropController == nil {
-            _cropController = CDCropController()
-            _cropController.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.cancelAction(sender:)))
-            _cropController.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.doneAction(sender:)))
+    private var _cropView: CDCropView!
+    var cropView: CDCropView {
+        if _cropView == nil {
+            _cropView = CDCropView.instance()
         }
-        return _cropController
+        return _cropView
     }
     
-    private var _innerNavigationController: UINavigationController!
-    var innerNavigationController: UINavigationController {
-        if _innerNavigationController == nil {
-            _innerNavigationController = UINavigationController(rootViewController: cropController)
-            _innerNavigationController.setNavigationBarHidden(true, animated: false)
-        }
-        return _innerNavigationController
-    }
-    
-    //MARK: - UIViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addChildViewController(innerNavigationController)
-        innerNavigationController.view.translatesAutoresizingMaskIntoConstraints = true
-        innerNavigationController.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        innerNavigationController.view.frame = view.bounds
-        view.addSubview(innerNavigationController.view)
+        automaticallyAdjustsScrollViewInsets = false
         
-        view.backgroundColor = UIColor.clear
+        edgesForExtendedLayout = []
+        
+        _cropView.translatesAutoresizingMaskIntoConstraints = true
+        _cropView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        _cropView.frame = view.bounds
+        view.addSubview(_cropView)
+        
+        let bottom = CDCropBottomView.instance()
+        bottom.translatesAutoresizingMaskIntoConstraints = false
+        _cropView.addSubview(bottom)
+        
+        bottom.leftButton.addTarget(self, action: #selector(self.cancelAction(sender:)), for: .touchUpInside)
+        bottom.rightButton.addTarget(self, action: #selector(self.doneAction(sender:)), for: .touchUpInside)
+        
+        let views = ["bottom": bottom]
+        _cropView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-0-[bottom]-0-|", options: [], metrics: nil, views: views))
+        _cropView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[bottom(==72.5)]-0-|", options: [], metrics: nil, views: views))
+        
+        view.backgroundColor = UIColor.white
+        
+        cropView.path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 300, height: 300))
     }
     
     //MARK: - Action
-    func doneAction(sender: Any) {
-        if (autoDismiss) { dismiss(animated: true, completion: nil) }
+    func cancelAction(sender: Any?) {
+        dismissIfNeed()
+        delegate?.cd_cropImageControllerCancel?(self)
+    }
+    
+    func doneAction(sender: Any?) {
+        dismissIfNeed()
         delegate?.cd_cropImageControllerDone?(self)
     }
     
-    func cancelAction(sender: Any) {
-        if (autoDismiss) { dismiss(animated: true, completion: nil) }
-        delegate?.cd_cropImageControllerCancel?(self)
+    func dismissIfNeed() {
+        if presentingViewController != nil {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -67,50 +75,50 @@ class CDCropImageController: UIViewController {
 extension CDCropImageController {
     var image: UIImage? {
         get {
-            return cropController.cropView.image
+            return cropView.image
         }
         set {
-            cropController.cropView.image = newValue
+            cropView.image = newValue
         }
     }
     
     var cropPath: UIBezierPath? {
         get {
-            return cropController.cropView.path
+            return cropView.path
         }
         set {
-            cropController.cropView.path = newValue
+            cropView.path = newValue
         }
     }
     
     var cropBackground: UIColor? {
         get {
-            return cropController.cropView.backgroundColor
+            return cropView.backgroundColor
         }
         set {
-            cropController.cropView.backgroundColor = newValue
+            cropView.backgroundColor = newValue
         }
     }
     
     var cropForeground: UIColor? {
         get {
-            return cropController.cropView.foregroundColor
+            return cropView.foregroundColor
         }
         set {
-            cropController.cropView.foregroundColor = newValue
+            cropView.foregroundColor = newValue
         }
     }
     
     var resultImage: UIImage? {
-        return cropController.cropView.resultImage
+        return cropView.resultImage
     }
     
     var borderColor: UIColor? {
         get {
-            return cropController.cropView.borderColor
+            return cropView.borderColor
         }
         set {
-            cropController.cropView.borderColor = newValue
+            cropView.borderColor = newValue
         }
     }
     

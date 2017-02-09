@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A70C4FB1E4B1AD9009B1F76 /* CDCropButtomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A70C4FA1E4B1AD9009B1F76 /* CDCropButtomView.xib */; };
+		4A5D713E1E4BFEEC00619322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61861E27CECC00482255 /* LaunchScreen.storyboard */; };
+		4A5D713F1E4BFEF700619322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61811E27CECC00482255 /* Main.storyboard */; };
+		4A5D715E1E4C04BE00619322 /* CDCropBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D715C1E4C04BE00619322 /* CDCropBottomView.xib */; };
+		4A5D715F1E4C04BE00619322 /* CDCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5D715D1E4C04BE00619322 /* CDCropView.xib */; };
+		4A5D71611E4C05AD00619322 /* CDCropBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5D71601E4C05AD00619322 /* CDCropBottomView.swift */; };
 		4A972D5B1E2886F4006B4BF5 /* CDCropScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */; };
 		4A9AEE791E292FF500FD81A5 /* CDCropBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9AEE781E292FF500FD81A5 /* CDCropBorderView.swift */; };
 		4AAF617E1E27CECC00482255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF617D1E27CECC00482255 /* AppDelegate.swift */; };
 		4AAF61801E27CECC00482255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF617F1E27CECC00482255 /* ViewController.swift */; };
-		4AAF61831E27CECC00482255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61811E27CECC00482255 /* Main.storyboard */; };
 		4AAF61851E27CECC00482255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61841E27CECC00482255 /* Assets.xcassets */; };
-		4AAF61881E27CECC00482255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61861E27CECC00482255 /* LaunchScreen.storyboard */; };
 		4AAF61911E27CF7100482255 /* CDCropImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF61901E27CF7100482255 /* CDCropImageController.swift */; };
 		4AAF61951E27D01400482255 /* CDCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF61941E27D01400482255 /* CDCropView.swift */; };
-		4AAF61971E27D02700482255 /* CDCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AAF61961E27D02700482255 /* CDCropView.xib */; };
 		4AC277561E27DF0100C59E00 /* CDCropPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC277551E27DF0100C59E00 /* CDCropPathView.swift */; };
-		4ACD190A1E2876F8003F33E6 /* CDCropController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACD19091E2876F8003F33E6 /* CDCropController.swift */; };
+		4AE6A3B01E4C738000200654 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4AE6A3AF1E4C738000200654 /* image.jpg */; };
 		55DE38ACA9EA63C182349605 /* Pods_CropImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008070CA30037D7F313F03B0 /* Pods_CropImage.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +28,9 @@
 		008070CA30037D7F313F03B0 /* Pods_CropImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CropImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B922CF4CD8787FD4489F96 /* Pods-CropImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CropImage/Pods-CropImage.debug.xcconfig"; sourceTree = "<group>"; };
 		323F5FFDCC443193F9FA94F7 /* Pods-CropImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-CropImage/Pods-CropImage.release.xcconfig"; sourceTree = "<group>"; };
-		4A70C4FA1E4B1AD9009B1F76 /* CDCropButtomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCropButtomView.xib; sourceTree = "<group>"; };
+		4A5D715C1E4C04BE00619322 /* CDCropBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCropBottomView.xib; sourceTree = "<group>"; };
+		4A5D715D1E4C04BE00619322 /* CDCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCropView.xib; sourceTree = "<group>"; };
+		4A5D71601E4C05AD00619322 /* CDCropBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropBottomView.swift; sourceTree = "<group>"; };
 		4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropScrollView.swift; sourceTree = "<group>"; };
 		4A9AEE781E292FF500FD81A5 /* CDCropBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropBorderView.swift; sourceTree = "<group>"; };
 		4AAF617A1E27CECC00482255 /* CropImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,10 +42,9 @@
 		4AAF61891E27CECC00482255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AAF61901E27CF7100482255 /* CDCropImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropImageController.swift; sourceTree = "<group>"; };
 		4AAF61941E27D01400482255 /* CDCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropView.swift; sourceTree = "<group>"; };
-		4AAF61961E27D02700482255 /* CDCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCropView.xib; sourceTree = "<group>"; };
 		4AC277551E27DF0100C59E00 /* CDCropPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropPathView.swift; sourceTree = "<group>"; };
 		4ACD19041E2861E1003F33E6 /* BridgeHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeaderFile.h; sourceTree = "<group>"; };
-		4ACD19091E2876F8003F33E6 /* CDCropController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCropController.swift; sourceTree = "<group>"; };
+		4AE6A3AF1E4C738000200654 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				4AAF617D1E27CECC00482255 /* AppDelegate.swift */,
 				4AAF617F1E27CECC00482255 /* ViewController.swift */,
+				4AE6A3AF1E4C738000200654 /* image.jpg */,
 				4AAF618F1E27CF5700482255 /* CropImageController */,
 				4AAF61811E27CECC00482255 /* Main.storyboard */,
 				4AAF61841E27CECC00482255 /* Assets.xcassets */,
@@ -102,10 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				4AAF61901E27CF7100482255 /* CDCropImageController.swift */,
-				4ACD19091E2876F8003F33E6 /* CDCropController.swift */,
-				4A70C4FA1E4B1AD9009B1F76 /* CDCropButtomView.xib */,
+				4A5D715D1E4C04BE00619322 /* CDCropView.xib */,
 				4AAF61941E27D01400482255 /* CDCropView.swift */,
-				4AAF61961E27D02700482255 /* CDCropView.xib */,
+				4A5D715C1E4C04BE00619322 /* CDCropBottomView.xib */,
+				4A5D71601E4C05AD00619322 /* CDCropBottomView.swift */,
 				4A9AEE781E292FF500FD81A5 /* CDCropBorderView.swift */,
 				4AC277551E27DF0100C59E00 /* CDCropPathView.swift */,
 				4A972D5A1E2886F4006B4BF5 /* CDCropScrollView.swift */,
@@ -185,11 +188,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AAF61881E27CECC00482255 /* LaunchScreen.storyboard in Resources */,
-				4AAF61971E27D02700482255 /* CDCropView.xib in Resources */,
+				4AE6A3B01E4C738000200654 /* image.jpg in Resources */,
+				4A5D713F1E4BFEF700619322 /* Main.storyboard in Resources */,
+				4A5D713E1E4BFEEC00619322 /* LaunchScreen.storyboard in Resources */,
+				4A5D715F1E4C04BE00619322 /* CDCropView.xib in Resources */,
+				4A5D715E1E4C04BE00619322 /* CDCropBottomView.xib in Resources */,
 				4AAF61851E27CECC00482255 /* Assets.xcassets in Resources */,
-				4A70C4FB1E4B1AD9009B1F76 /* CDCropButtomView.xib in Resources */,
-				4AAF61831E27CECC00482255 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +258,7 @@
 				4A972D5B1E2886F4006B4BF5 /* CDCropScrollView.swift in Sources */,
 				4AAF617E1E27CECC00482255 /* AppDelegate.swift in Sources */,
 				4A9AEE791E292FF500FD81A5 /* CDCropBorderView.swift in Sources */,
-				4ACD190A1E2876F8003F33E6 /* CDCropController.swift in Sources */,
+				4A5D71611E4C05AD00619322 /* CDCropBottomView.swift in Sources */,
 				4AAF61911E27CF7100482255 /* CDCropImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

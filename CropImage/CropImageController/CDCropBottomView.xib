@@ -11,19 +11,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-u7-y7Z">
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-u7-y7Z" customClass="CDCropBottomView" customModule="CropImage" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="392" height="95"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vip-YJ-w6h">
-                    <rect key="frame" x="13" y="31" width="53" height="33"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="13" y="30.5" width="56" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Cancel">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbY-bq-DIS">
-                    <rect key="frame" x="320" y="31" width="59" height="33"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="317" y="30.5" width="62" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Choose">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -37,7 +37,11 @@
                 <constraint firstItem="HbY-bq-DIS" firstAttribute="centerY" secondItem="BaY-u7-y7Z" secondAttribute="centerY" id="apS-pe-FLG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-27" y="-192"/>
+            <connections>
+                <outlet property="leftButton" destination="Vip-YJ-w6h" id="qtc-E7-KtI"/>
+                <outlet property="rightButton" destination="HbY-bq-DIS" id="r0t-yg-6bv"/>
+            </connections>
+            <point key="canvasLocation" x="-590" y="-333"/>
         </view>
     </objects>
 </document>

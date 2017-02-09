@@ -52,6 +52,7 @@ class CDCropView: UIView {
     }
     
     var resultImage: UIImage? {
+        guard !scrollView.isTracking else { return nil }
         return nil
     }
     

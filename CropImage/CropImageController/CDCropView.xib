@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CDCropView" customModule="CropImage" customModuleProvider="target">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="CDCropView" customModule="CropImage" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="370" height="576"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -141,33 +141,6 @@
                         <constraint firstItem="gPV-qu-RNp" firstAttribute="leading" secondItem="E5L-nc-SGC" secondAttribute="leading" id="zCv-nV-U8M"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYI-59-93c">
-                    <rect key="frame" x="0.0" y="503.5" width="370" height="72.5"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCO-9e-IF9">
-                            <rect key="frame" x="13" y="20" width="53" height="33"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Cancel">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yt0-fG-QcV">
-                            <rect key="frame" x="298" y="19" width="59" height="33"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Choose">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.10827202349901199" green="0.1083889827132225" blue="0.10829015821218491" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstItem="Yt0-fG-QcV" firstAttribute="centerY" secondItem="DYI-59-93c" secondAttribute="centerY" id="3en-kG-fK5"/>
-                        <constraint firstAttribute="trailing" secondItem="Yt0-fG-QcV" secondAttribute="trailing" constant="13" id="4vl-iB-Uan"/>
-                        <constraint firstItem="RCO-9e-IF9" firstAttribute="centerY" secondItem="DYI-59-93c" secondAttribute="centerY" id="b9J-k1-o6T"/>
-                        <constraint firstAttribute="height" constant="72.5" id="fxu-Ln-FFQ"/>
-                        <constraint firstItem="RCO-9e-IF9" firstAttribute="leading" secondItem="DYI-59-93c" secondAttribute="leading" constant="13" id="ylz-6D-Ehp"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -175,9 +148,6 @@
                 <constraint firstItem="kQC-y9-X2G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bkt-Gl-lBc"/>
                 <constraint firstAttribute="bottom" secondItem="kQC-y9-X2G" secondAttribute="bottom" id="HBC-H4-sNc"/>
                 <constraint firstItem="kQC-y9-X2G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Q1q-lV-f4i"/>
-                <constraint firstAttribute="trailing" secondItem="DYI-59-93c" secondAttribute="trailing" id="TTv-xw-s7c"/>
-                <constraint firstItem="DYI-59-93c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZD9-vx-zxf"/>
-                <constraint firstAttribute="bottom" secondItem="DYI-59-93c" secondAttribute="bottom" id="rb9-7q-hje"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
